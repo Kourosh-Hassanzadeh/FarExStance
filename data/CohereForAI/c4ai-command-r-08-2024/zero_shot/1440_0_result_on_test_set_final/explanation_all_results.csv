@@ -1,0 +1,2 @@
+,rouge,SGC,WGC,LC
+0,"{'rouge1_fmeasure': tensor(0.0441), 'rouge1_precision': tensor(0.0701), 'rouge1_recall': tensor(0.0380), 'rouge2_fmeasure': tensor(0.0128), 'rouge2_precision': tensor(0.0208), 'rouge2_recall': tensor(0.0114), 'rougeL_fmeasure': tensor(0.0439), 'rougeL_precision': tensor(0.0697), 'rougeL_recall': tensor(0.0378), 'rougeLsum_fmeasure': tensor(0.0440), 'rougeLsum_precision': tensor(0.0699), 'rougeLsum_recall': tensor(0.0379)}",0.1007,0.8069,0.9243
