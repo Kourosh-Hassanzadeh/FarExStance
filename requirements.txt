@@ -27,3 +27,5 @@ anthropic
 openai
 bitsandbytes
 accelerate
+ipykernel
+seaborn

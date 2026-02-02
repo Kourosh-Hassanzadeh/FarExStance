@@ -40,11 +40,6 @@ else:
   device = torch.device('cpu')
   print_log("Device is cpu.\n")
 
-
-
-# device = torch.device("cpu")
-
-
 """# Read Dataset"""
 
 ner_model_id= 'HooshvareLab/bert-base-parsbert-ner-uncased'

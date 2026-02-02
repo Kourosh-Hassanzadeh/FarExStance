@@ -165,13 +165,26 @@ model.to(device)
 
 # ===================== OPTIMIZER =====================
 loss_fn = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(
+# optimizer = torch.optim.Adam(
+#     model.parameters(),
+#     lr=3e-5,
+#     weight_decay=0.8e-5
+# )
+
+### improve
+optimizer = torch.optim.SGD(
     model.parameters(),
-    lr=3e-5,
+    lr=3e-3,
+    momentum=0.9,
     weight_decay=0.8e-5
 )
 
-# ===================== TRAIN =====================
+scheduler = torch.optim.lr_scheduler.MultiStepLR(
+    optimizer,
+    milestones=[2, 4],
+    gamma=0.1
+)
+
 trainer = TorchTrainer(
     model,
     train_dataloader,
@@ -180,8 +193,11 @@ trainer = TorchTrainer(
     loss_fn,
     device,
     accumulation_steps,
-    print_log
+    print_log,
+    scheduler=scheduler
 )
+###
 
-model_save_directory = "models/"
+# ===================== TRAIN =====================
+model_save_directory = "models_sgd/"
 loss_log = trainer.fit(num_epochs, patience, model_save_directory)

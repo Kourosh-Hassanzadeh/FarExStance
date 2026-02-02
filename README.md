@@ -87,7 +87,11 @@ python xlmr_model.py
 
   sudo make altinstall
   ```
-
+  
+  ## or more lightweight:
+  ```
+  python xlmr_sampled.py
+  ```
 
   ## reproduce results:
 
@@ -95,8 +99,5 @@ python xlmr_model.py
   python xlmr_inference.py
   ```
 
-  ## evaluation metrics:
 
-  ```
-  python calculate_metrics.py
-  ```
+* I used GPU for training but it can be trained an CPU too.
